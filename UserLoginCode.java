@@ -65,13 +65,11 @@ public class UserLoginCode {
 								
 								else if (num1==0 && !enteredPassword.equals("exit")) {
 									System.out.println("!! You have exceeded the maximum attempts limit, you will be kicked out of the system. !!");
-									System.exit(0);}
+									enteredPassword="exit";}
 							
 							}	
 						
 						} while (num3==0 && !enteredPassword.equals("exit"));
-					
-						
 					
 					}
 	
@@ -101,7 +99,8 @@ public class UserLoginCode {
 							
 							if (password.equals("exit")==false) {
 								
-								char[] chars = password.toCharArray();									coo=0;
+								char[] chars = password.toCharArray();
+								coo=0;
 									
 									for (char c : chars) {
 										  if (c >= 48 && c <= 57) {
